@@ -1,0 +1,41 @@
+/*
+ * Reset styles
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  padding: 2rem;
+  background-color: #fff;
+}
+body,
+input,
+select {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+hr {
+  margin: 2rem 0;
+  height: 1px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
