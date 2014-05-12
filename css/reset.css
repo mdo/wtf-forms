@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: #fff;
 }
 body,
@@ -28,6 +28,7 @@ h1, h2 {
   margin-top: 0;
   margin-bottom: .5rem;
   font-weight: 500;
+  line-height: 1.1;
 }
 p {
   margin-top: 0;
