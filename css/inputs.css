@@ -84,8 +84,6 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  text-indent: 0.01px;
-    text-overflow: '';
 }
 .select:after {
   position: absolute;
@@ -109,8 +107,17 @@
   color: #fff;
   background-color: #0074D9;
 }
+
+/* Hide the arrow in IE10 and up */
+.select select::-ms-expand {
+  display: none;
+}
+
+/* Firefox hack to hide the arrow */
 @-moz-document url-prefix() {
   .select select {
+    text-indent: 0.01px;
+    text-overflow: '';
     padding-right: 1rem;
   }
 }
