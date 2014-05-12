@@ -99,7 +99,7 @@
   pointer-events: none;
   border: solid transparent;
   border-top-color: #555;
-  border-width: .4rem;
+  border-width: .35rem;
 }
 .select select:hover,
 .select select:focus {

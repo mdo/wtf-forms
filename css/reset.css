@@ -11,9 +11,15 @@
 html {
   font-size: 14px;
 }
+@media (min-width: 35em) {
+  html {
+    font-size: 20px;
+  }
+}
 
 body {
   padding: 1.5rem;
+  color: #333;
   background-color: #fff;
 }
 body,
@@ -39,4 +45,9 @@ hr {
   height: 1px;
   border: 0;
   border-bottom: 1px solid #eee;
+}
+
+.container {
+  max-width: 30em;
+  margin: 0 auto;
 }
