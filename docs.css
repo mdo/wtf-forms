@@ -1,0 +1,236 @@
+---
+layout: nil
+---
+
+/*
+ * Fonts
+ */
+
+@font-face {
+  font-family: 'fontello';
+  src: url('font/fontello.eot');
+  src: url('font/fontello.eot#iefix') format('embedded-opentype'),
+       url('font/fontello.woff') format('woff'),
+       url('font/fontello.ttf') format('truetype'),
+       url('font/fontello.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.icon-github-circled:before { content: '\e800'; }
+.icon-twitter:before { content: '\e801'; }
+
+
+
+/*
+ * Scaffolding and type
+ */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+@media (min-width: 40em) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1.5rem;
+  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+  color: #5a5a5a;
+}
+
+/* Override for form controls */
+label,
+input,
+select,
+button {
+  font: 1rem/1.5 "Helvetica Neue", Arial, sans-serif;
+}
+
+a {
+  color: #0074d9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 .5rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #2a2a2a;
+  letter-spacing: -.05em;
+}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { padding-top: 1rem; margin-top: 2rem; font-size: 1.75rem; }
+h4 { font-size: 1.25rem }
+
+p {
+  margin: 0 0 1rem;
+}
+.lead {
+  font-size: 1.3rem;
+}
+
+blockquote {
+  position: relative;
+  margin: 0 1rem 1rem;
+  font-style: italic;
+  color: #7a7a7a;
+}
+blockquote p {
+  margin-bottom: 0;
+}
+
+ul li {
+  margin-bottom: .25rem;
+}
+
+/* Tighten up margin on last items */
+p:last-child,
+ul:last-child,
+blockquote:last-child{
+  margin-bottom: 0;
+}
+
+
+
+/*
+ * Code
+ */
+
+code,
+pre {
+  font-family: "PT Mono", Menlo, "Courier New", monospace;
+  font-size: 95%;
+}
+code {
+  padding: 2px 4px;
+  font-size: 85%;
+  color: #d44950;
+  background-color: #f7f7f9;
+  border-radius: .2rem;
+}
+
+pre {
+  display: block;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+pre code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+.highlight {
+  margin: 0 0 1rem;
+  padding: 1rem;
+  background-color: #f7f7f9;
+}
+.highlight pre {
+  margin-bottom: 0;
+}
+.highlight + .highlight {
+  margin-top: 1rem;
+}
+
+
+/*
+ * The Grid
+ */
+
+.container {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*
+ * Masthead
+ */
+
+.masthead {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+.masthead h1 {
+  margin-bottom: .25rem;
+}
+.masthead .icon {
+  display: inline-block;
+  font-size: 3rem;
+}
+.masthead-links .icon {
+  font-size: 2rem;
+  margin-right: .5rem;
+}
+.masthead-links a {
+  color: #333;
+  text-decoration: none;
+  transition: all .15s linear;
+}
+.masthead-links a:hover {
+  color: #08c;
+}
+
+
+/*
+ * Footer
+ */
+
+.footer {
+  margin-top: 3rem;
+  padding: 3rem 1rem;
+  font-size: 90%;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+.footer p {
+  margin-bottom: .5rem;
+}
+
+.quick-links {
+  list-style: none;
+  margin-left: 0;
+}
+.quick-links li {
+  display: inline;
+}
+
+
+/*
+ * Syntax highlighting
+ */
+
+{% include syntax.css %}
