@@ -5,6 +5,12 @@
  * to style as checkbox or radio.
  */
 
+
+
+/*
+ * Checkboxes and radios
+ */
+
 .control {
   position: relative;
   display: inline-block;
@@ -38,30 +44,26 @@
 /* Checked state */
 .control input:checked ~ .control-indicator {
   color: #fff;
-  background-color: #0074D9;
+  background-color: #0074d9;
 }
 
-/*
- * Checkbox
- */
-
+/* Checkbox modifiers */
 .checkbox .control-indicator {
-  border-radius: .3rem;
+  border-radius: .25rem;
 }
 .checkbox input:checked ~ .control-indicator:before {
   content: "\2714";
 }
 
-/*
- * Radio
- */
-
+/* Radio modifiers */
 .radio .control-indicator {
   border-radius: 50%;
 }
 .radio input:checked ~ .control-indicator:before {
   content: "●";
 }
+
+
 
 /*
  * Select
@@ -70,14 +72,17 @@
 .select {
   position: relative;
   display: inline-block;
+  color: #555;
 }
 .select select {
+  display: inline-block;
   margin: 0;
   padding: .5rem 2.25rem .5rem 1rem;
+  line-height: 1.5;
   color: #555;
   background-color: #eee;
   border: 0;
-  border-radius: .3rem;
+  border-radius: .25rem;
   box-shadow: inset 0 -1px 0 rgba(0,0,0,.05), inset 0 1px 0 rgba(255,255,255,.1);
   cursor: pointer;
   outline: 0;
@@ -85,6 +90,12 @@
      -moz-appearance: none;
           appearance: none;
 }
+/* Undo the Firefox inner focus ring */
+.select select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+/* Dropdown arrow */
 .select:after {
   position: absolute;
   top: 50%;
@@ -95,17 +106,19 @@
   height: 0;
   margin-top: -.15rem;
   pointer-events: none;
-  border: solid transparent;
-  border-top-color: #555;
-  border-width: .35rem;
+  border-top: .35rem solid;
+  border-right: .35rem solid transparent;
+  border-bottom: .35rem solid transparent;
+  border-left: .35rem solid transparent;
 }
+/* States */
 .select select:hover,
 .select select:focus {
   background-color: #ddd;
 }
 .select select:active {
   color: #fff;
-  background-color: #0074D9;
+  background-color: #0074d9;
 }
 
 /* Hide the arrow in IE10 and up */
@@ -121,6 +134,80 @@
     padding-right: 1rem;
   }
 }
+
+/* IE9 hack to hide the arrow */
+@media screen and (min-width:0\0) {
+  .select select {
+    z-index: 1;
+    padding: .5rem 1.5rem .5rem 1rem;
+  }
+  .select:after {
+    z-index: 5;
+  }
+  .select:before {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    bottom: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 1.5rem;
+    background-color: #eee;
+  }
+  .select select:hover,
+  .select select:focus,
+  .select select:active {
+    color: #555;
+    background-color: #eee;
+  }
+}
+
+
+
+/*
+ * File
+ */
+
+.file {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.file input {
+  margin: 0;
+  filter: alpha(opacity=0);
+  opacity: .0;
+}
+.file:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  content: "Choose file...";
+  padding: .5rem 2.25rem .5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: .25rem;
+  box-shadow: inset 0 .2rem .4rem rgba(0,0,0,.05);
+}
+.file:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 6;
+  content: "Browse";
+  padding: .5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 0 .25rem .25rem 0;
+}
+
 
 
 /*

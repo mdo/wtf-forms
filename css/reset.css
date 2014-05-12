@@ -2,7 +2,9 @@
  * Reset styles
  */
 
-* {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -30,11 +32,26 @@ select {
   line-height: 1.5;
 }
 
+a {
+  color: #0074d9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 h1, h2 {
   margin-top: 0;
   margin-bottom: .5rem;
   font-weight: 500;
   line-height: 1.1;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
 }
 p {
   margin-top: 0;
@@ -47,7 +64,13 @@ hr {
   border-bottom: 1px solid #eee;
 }
 
+.masthead {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
 .container {
-  max-width: 30em;
+  max-width: 34em;
   margin: 0 auto;
 }
