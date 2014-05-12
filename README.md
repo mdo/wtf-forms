@@ -1,7 +1,5 @@
 # WTF, forms?
 
-# WTF, HTML and CSS?
-
 **WTF, forms?** provides friendlier HTML form controls with a little CSS margic. It's designed for IE9+, as well as the latest Chrome, Safari, and Firefox.
 
 **[Start reading ☞](http://wtfforms.com)**
