@@ -91,7 +91,7 @@
           appearance: none;
 }
 /* Undo the Firefox inner focus ring */
-.select select:-moz-focusring {
+.select select:focus:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
