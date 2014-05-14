@@ -1,0 +1,21 @@
+{
+  "name": "wtf-forms",
+  "description": "Friendlier HTML form controls with a little CSS magic.",
+  "version": "2.0.1",
+  "keywords": [
+    "html",
+    "css",
+    "forms",
+    "web"
+  ],
+  "homepage": "http://wtfforms.com",
+  "main": [
+    "wtf-forms.css"
+  ],
+  "ignore": [
+    ".*",
+    "docs.css",
+    "index.html",
+    "font/"
+  ]
+}
