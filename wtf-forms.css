@@ -34,6 +34,10 @@
   color: #eee;
   text-align: center;
   background-color: #eee;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* Hover state */
@@ -211,6 +215,10 @@
   border: .075rem solid #ddd;
   border-radius: .25rem;
   box-shadow: inset 0 .2rem .4rem rgba(0,0,0,.05);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .file-custom:after {
   content: "Choose file...";
