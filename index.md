@@ -102,6 +102,6 @@ Honestly, no idea right now.
 
 ### Changelog
 
-For a full changelog, visit the [releases page on GitHub]({{ site.repo }}/releases).
+For a full changelog, visit the [releases page on GitHub]({{ site.repo }}releases).
 
 This project utilizes [SemVer](http://semver.org) for versioning releases for maximum backward compatibility.
