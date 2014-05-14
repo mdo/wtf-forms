@@ -4,16 +4,16 @@ layout: default
 
 ### Checkboxes and radios
 
-<div class="controls-stacked">
+<form class="controls-stacked">
   {% include checkbox.html %}
-</div>
+</form>
 ```html
 {% include checkbox.html %}
 ```
 
-<div class="controls-stacked">
+<form class="controls-stacked">
   {% include radio.html %}
-</div>
+</form>
 ```html
 {% include radio.html %}
 ```
@@ -31,9 +31,9 @@ With the sibling selector (`~`), we use the `:checked` state to trigger a makesh
 
 ### Select menu
 
-<div class="controls-stacked">
+<form class="controls-stacked">
   {% include select.html %}
-</div>
+</form>
 ```html
 {% include select.html %}
 ```
@@ -59,9 +59,9 @@ Any ideas on improving these are most welcome.
 
 ### File browser
 
-<div class="controls-stacked">
+<form class="controls-stacked">
   {% include file.html %}
-</div>
+</form>
 ```html
 {% include file.html %}
 ```
@@ -75,3 +75,43 @@ The file input is the most gnarly of the bunch. Here's how it works:
 * We declare a `height` on the `<input>` for proper spacing for surrounding content.
 
 In other words, it's an entirely custom element, all generated via CSS.
+
+**Heads up!** The custom file input is currently unable to update the *Choose file...* text with the filename. Without JavaScript, this might not be possible to change, but I'm open to ideas.
+
+
+### FAQs
+
+#### What about every other form control?
+For the time being, **WTF, forms?** is limited to checkboxes, radio buttons, select menus, and file inputs. Additional custom inputs will depend on browser support.
+
+#### Why are there no `for` attributes?
+We nest our `<input>`s and `<select>`s within a `<label>`, so there's no need to specify a `for` attribute as the browser will automatically associate the two.
+
+#### What about `hover` states?
+Basic hover styles have been included, but they've been commented out because they are sticky on iOS. Uncomment if you really need it.
+
+#### Does this require JavaScript?
+Not for the time being, however, the file input might be better off with it.
+
+#### Will this be added to Bootstrap?
+Possibly, but not until v4 at the earliest.
+
+#### Is this screen reader friendly?
+Honestly, no idea right now.
+
+
+### Changelog
+
+*WTF, forms?* utilizes [SemVer](http://semver.org) for versioning releases.
+
+#### v1: May 12, 2014
+Initial release.
+
+#### v2: May 14, 2014
+* New focus styles. [Fixes #3.](https://github.com/mdo/wtf-forms/issues/3)
+* Commented out hover styles for now because iOS makes them sticky, and the hover styles weren't particularly useful.
+* File inputs now require a `<span>` within `.file`. This was added for proper focus state support as a `<label>` has no idea if the child `<input>` has focus or not.
+* Added `z-index: -1;` to checkboxes and radios to avoid a cursor change when hovering where the orignal input rendered. [Fixes #10.](https://github.com/mdo/wtf-forms/pull/10)
+* Added FAQs and this changelog to the project page.
+
+For issues, milestones, and more, visit the [GitHub project]({{ site.repo }}).
