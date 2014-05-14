@@ -49,7 +49,7 @@ html {
 }
 @media (min-width: 40em) {
   html {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -230,7 +230,6 @@ pre code {
  */
 
 .hll { background-color: #ffffcc }
- /*{ background: #f0f3f3; }*/
 .c { color: #999; } /* Comment */
 .err { color: #AA0000; background-color: #FFAAAA } /* Error */
 .k { color: #006699; } /* Keyword */
@@ -295,4 +294,3 @@ pre code {
 .css .o,
 .css .o + .nt,
 .css .nt + .nt { color: #999; }
-
