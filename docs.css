@@ -53,7 +53,7 @@ html {
 }
 @media (min-width: 40em) {
   html {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -234,3 +234,4 @@ pre code {
  */
 
 {% include syntax.css %}
+{% include ads.css %}
