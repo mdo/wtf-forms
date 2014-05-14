@@ -12,8 +12,7 @@
 
     <link rel="stylesheet" href="wtf-forms.css">
     <link rel="stylesheet" href="docs.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Mono&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic|PT+Mono&amp;subset=latin,cyrillic">
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -48,20 +47,20 @@
     <div class="container">
       <h3>Checkboxes and radios</h3>
 
-<div class="controls-stacked">
+<form class="controls-stacked">
   <label class="control checkbox">
   <input type="checkbox">
   <span class="control-indicator"></span>
   Check this custom checkbox
 </label>
-</div>
-<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control checkbox&quot;</span><span class="nt">&gt;</span>
+</form>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control checkbox&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;control-indicator&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   Check this custom checkbox
 <span class="nt">&lt;/label&gt;</span>
 </code></pre></div>
-<div class="controls-stacked">
+<form class="controls-stacked">
   <label class="control radio">
   <input type="radio" id="radio1" name="radio">
   <span class="control-indicator"></span>
@@ -72,8 +71,8 @@
   <span class="control-indicator"></span>
   Or toggle this other custom radio
 </label>
-</div>
-<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control radio&quot;</span><span class="nt">&gt;</span>
+</form>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control radio&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">id=</span><span class="s">&quot;radio1&quot;</span> <span class="na">name=</span><span class="s">&quot;radio&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;control-indicator&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   Toggle this custom radio
@@ -98,19 +97,19 @@
 
 <h3>Select menu</h3>
 
-<div class="controls-stacked">
+<form class="controls-stacked">
   <label class="select">
   <select>
-    <option checked>Open this select menu</option>
+    <option selected>Open this select menu</option>
     <option value="1">One</option>
     <option value="2">Two</option>
     <option value="3">Three</option>
   </select>
 </label>
-</div>
-<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;select&quot;</span><span class="nt">&gt;</span>
+</form>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;select&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;select&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">checked</span><span class="nt">&gt;</span>Open this select menu<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">selected</span><span class="nt">&gt;</span>Open this select menu<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>One<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>Two<span class="nt">&lt;/option&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="nt">&gt;</span>Three<span class="nt">&lt;/option&gt;</span>
@@ -141,13 +140,15 @@
 
 <h3>File browser</h3>
 
-<div class="controls-stacked">
+<form class="controls-stacked">
   <label class="file">
-  <input type="file">
+  <input type="file" id="file">
+  <span class="file-custom"></span>
 </label>
-</div>
-<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;file&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;file&quot;</span><span class="nt">&gt;</span>
+</form>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;file&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;file&quot;</span> <span class="na">id=</span><span class="s">&quot;file&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;file-custom&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/label&gt;</span>
 </code></pre></div>
 <p>The file input is the most gnarly of the bunch. Here&#39;s how it works:</p>
@@ -161,6 +162,54 @@
 </ul>
 
 <p>In other words, it&#39;s an entirely custom element, all generated via CSS.</p>
+
+<p><strong>Heads up!</strong> The custom file input is currently unable to update the <em>Choose file...</em> text with the filename. Without JavaScript, this might not be possible to change, but I&#39;m open to ideas.</p>
+
+<h3>FAQs</h3>
+
+<h4>What about every other form control?</h4>
+
+<p>For the time being, <strong>WTF, forms?</strong> is limited to checkboxes, radio buttons, select menus, and file inputs. Additional custom inputs will depend on browser support.</p>
+
+<h4>Why are there no <code>for</code> attributes?</h4>
+
+<p>We nest our <code>&lt;input&gt;</code>s and <code>&lt;select&gt;</code>s within a <code>&lt;label&gt;</code>, so there&#39;s no need to specify a <code>for</code> attribute as the browser will automatically associate the two.</p>
+
+<h4>What about <code>hover</code> states?</h4>
+
+<p>Basic hover styles have been included, but they&#39;ve been commented out because they are sticky on iOS. Uncomment if you really need it.</p>
+
+<h4>Does this require JavaScript?</h4>
+
+<p>Not for the time being, however, the file input might be better off with it.</p>
+
+<h4>Will this be added to Bootstrap?</h4>
+
+<p>Possibly, but not until v4 at the earliest.</p>
+
+<h4>Is this screen reader friendly?</h4>
+
+<p>Honestly, no idea right now.</p>
+
+<h3>Changelog</h3>
+
+<p><em>WTF, forms?</em> utilizes <a href="http://semver.org">SemVer</a> for versioning releases.</p>
+
+<h4>v1: May 12, 2014</h4>
+
+<p>Initial release.</p>
+
+<h4>v2: May 14, 2014</h4>
+
+<ul>
+<li>New focus styles. <a href="https://github.com/mdo/wtf-forms/issues/3">Fixes #3.</a></li>
+<li>Commented out hover styles for now because iOS makes them sticky, and the hover styles weren&#39;t particularly useful.</li>
+<li>File inputs now require a <code>&lt;span&gt;</code> within <code>.file</code>. This was added for proper focus state support as a <code>&lt;label&gt;</code> has no idea if the child <code>&lt;input&gt;</code> has focus or not.</li>
+<li>Added <code>z-index: -1;</code> to checkboxes and radios to avoid a cursor change when hovering where the orignal input rendered. <a href="https://github.com/mdo/wtf-forms/pull/10">Fixes #10.</a></li>
+<li>Added FAQs and this changelog to the project page.</li>
+</ul>
+
+<p>For issues, milestones, and more, visit the <a href="https://github.com/mdo/wtf-forms">GitHub project</a>.</p>
 
     </div>
 

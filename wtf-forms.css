@@ -21,6 +21,7 @@
 .control input {
   position: absolute;
   opacity: 0;
+  z-index: -1; /* Put the input behind the label so it doesn't overlay text */
 }
 .control-indicator {
   position: absolute;
@@ -36,10 +37,16 @@
 }
 
 /* Hover state */
-.control:hover .control-indicator,
-.control:focus .control-indicator {
+/* Uncomment if you need it, but be aware of the sticky iOS states.
+.control:hover .control-indicator {
   color: #fff;
   background-color: #ccc;
+}
+*/
+
+/* Focus */
+.control input:focus ~ .control-indicator {
+  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
 }
 
 /* Checked state */
@@ -111,11 +118,20 @@
   border-bottom: .35rem solid transparent;
   border-left: .35rem solid transparent;
 }
-/* States */
-.select select:hover,
-.select select:focus {
+
+/* Hover state */
+/* Uncomment if you need it, but be aware of the sticky iOS states.
+.select select:hover {
   background-color: #ddd;
 }
+*/
+
+/* Focus */
+.select select:focus {
+  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
+}
+
+/* Active/open */
 .select select:active {
   color: #fff;
   background-color: #0074d9;
@@ -181,13 +197,12 @@
   filter: alpha(opacity=0);
   opacity: 0;
 }
-.file:after {
+.file-custom {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   z-index: 5;
-  content: "Choose file...";
   height: 2.5rem;
   padding: .5rem 1rem;
   line-height: 1.5;
@@ -197,11 +212,14 @@
   border-radius: .25rem;
   box-shadow: inset 0 .2rem .4rem rgba(0,0,0,.05);
 }
-.file:before {
+.file-custom:after {
+  content: "Choose file...";
+}
+.file-custom:before {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  top: -.075rem;
+  right: -.075rem;
+  bottom: -.075rem;
   z-index: 6;
   display: block;
   content: "Browse";
@@ -212,6 +230,11 @@
   background-color: #eee;
   border: .075rem solid #ddd;
   border-radius: 0 .25rem .25rem 0;
+}
+
+/* Focus */
+.file input:focus ~ .file-custom {
+  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
 }
 
 
@@ -229,4 +252,3 @@
 .controls-stacked .control + .control {
   margin-top: .5rem;
 }
-
