@@ -95,6 +95,36 @@
 
 <p>With the sibling selector (<code>~</code>), we use the <code>:checked</code> state to trigger a makeshift checked state on the custom control.</p>
 
+<p>In the checked states, we use <strong>base64 embedded SVG icons</strong> from <a href="http://useiconic.com/open">Open Iconic</a>. This provides us the best control for styling and positioning across browsers and devices.</p>
+
+<h4>Alternate icons</h4>
+
+<p>By default, checkboxes use a checkmark and radios use an filled circle. Also included are two modifier classes, <code>.control-x</code> and <code>.control-dash</code>, to change things up should the need arise.</p>
+
+<form class="controls-inline">
+  <label class="control checkbox control-x">
+  <input type="checkbox" checked>
+  <span class="control-indicator"></span>
+</label>
+<label class="control checkbox control-dash">
+  <input type="checkbox" checked>
+  <span class="control-indicator"></span>
+</label>
+<label class="control radio control-x">
+  <input type="radio" id="radioIcon1" name="radio-icon-x" checked>
+  <span class="control-indicator"></span>
+</label>
+<label class="control radio control-dash">
+  <input type="radio" id="radioIcon2" name="radio-icon-dash" checked>
+  <span class="control-indicator"></span>
+</label>
+</form>
+
+<p>Add the modifier classes to the <code>&lt;label&gt;</code>, like so:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control checkbox control-x&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/label&gt;</span>
+</code></pre></div>
+<p>Want to customize the icons further, or use other ones? <a href="http://useiconic.com/open">Download Open Iconic</a>—included are font files, PNGs, and SVGs.</p>
+
 <h3>Select menu</h3>
 
 <form class="controls-stacked">
@@ -203,6 +233,7 @@
   <p>&lt;3</p>
   <p>Made with all the love in the world by <a href="https://twitter.com/mdo/">@mdo</a>.</p>
   <p>Open sourced under MIT. Copyright 2014.</p>
+  <p>Icons for checkbox and radio from <a href="http://useiconic.com/open">Open Iconic</a>.</p>
 
   <ul class="quick-links">
     <li>
