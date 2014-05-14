@@ -102,16 +102,6 @@ Honestly, no idea right now.
 
 ### Changelog
 
-*WTF, forms?* utilizes [SemVer](http://semver.org) for versioning releases.
+For a full changelog, visit the [releases page on GitHub]({{ site.repo }}/releases).
 
-#### v1: May 12, 2014
-Initial release.
-
-#### v2: May 14, 2014
-* New focus styles. [Fixes #3.](https://github.com/mdo/wtf-forms/issues/3)
-* Commented out hover styles for now because iOS makes them sticky, and the hover styles weren't particularly useful.
-* File inputs now require a `<span>` within `.file`. This was added for proper focus state support as a `<label>` has no idea if the child `<input>` has focus or not.
-* Added `z-index: -1;` to checkboxes and radios to avoid a cursor change when hovering where the orignal input rendered. [Fixes #10.](https://github.com/mdo/wtf-forms/pull/10)
-* Added FAQs and this changelog to the project page.
-
-For issues, milestones, and more, visit the [GitHub project]({{ site.repo }}).
+This project utilizes [SemVer](http://semver.org) for versioning releases for maximum backward compatibility.

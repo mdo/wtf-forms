@@ -1,7 +1,7 @@
 name:          "WTF, forms?"
 url:           http://wtfforms.com
-repo:          https://github.com/mdo/wtf-forms
-twitter:       https://twitter.com/mdo
+repo:          https://github.com/mdo/wtf-forms/
+twitter:       https://twitter.com/mdo/
 
 markdown:      redcarpet
 permalink:     pretty
