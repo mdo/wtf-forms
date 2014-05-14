@@ -28,6 +28,26 @@ We hide the default `<input>` with `opacity` and instead use the `<span class="c
 
 With the sibling selector (`~`), we use the `:checked` state to trigger a makeshift checked state on the custom control.
 
+In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](http://useiconic.com/open). This provides us the best control for styling and positioning across browsers and devices.
+
+
+#### Alternate icons
+
+By default, checkboxes use a checkmark and radios use an filled circle. Also included are two modifier classes, `.control-x` and `.control-dash`, to change things up should the need arise.
+
+<form class="controls-inline">
+  {% include icons.html %}
+</form>
+
+Add the modifier classes to the `<label>`, like so:
+
+```html
+<label class="control checkbox control-x">...</label>
+```
+
+Want to customize the icons further, or use other ones? [Download Open Iconic](http://useiconic.com/open)—included are font files, PNGs, and SVGs.
+
+
 
 ### Select menu
 
