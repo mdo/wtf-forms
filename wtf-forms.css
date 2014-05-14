@@ -17,6 +17,10 @@
   padding-left: 1.5rem;
   color: #555;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .control input {
   position: absolute;
@@ -34,10 +38,6 @@
   color: #eee;
   text-align: center;
   background-color: #eee;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 /* Hover state */
