@@ -37,7 +37,8 @@
 
 /* Hover state */
 .control:hover .control-indicator,
-.control:focus .control-indicator {
+input:focus + .control-indicator,
+select:focus + .control-indicator {
   color: #fff;
   background-color: #ccc;
 }
