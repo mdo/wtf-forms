@@ -163,7 +163,6 @@
 
 /* Media query to target Firefox only */
 @-moz-document url-prefix() {
-
   /* Firefox hack to hide the arrow */
   .select select {
     text-indent: 0.01px;
@@ -171,7 +170,7 @@
     padding-right: 1rem;
   }
 
-  /* <option> elements inherit styles from <select>, let's reset'em */
+  /* <option> elements inherit styles from <select>, so reset them. */
   .select option {
     background-color: white;
   }
