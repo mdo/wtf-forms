@@ -117,7 +117,7 @@
           appearance: none;
 }
 /* Undo the Firefox inner focus ring */
-.select select:-moz-focusring {
+.select select:focus:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
@@ -161,12 +161,18 @@
   display: none;
 }
 
-/* Firefox hack to hide the arrow */
+/* Media query to target Firefox only */
 @-moz-document url-prefix() {
+  /* Firefox hack to hide the arrow */
   .select select {
     text-indent: 0.01px;
     text-overflow: '';
     padding-right: 1rem;
+  }
+
+  /* <option> elements inherit styles from <select>, so reset them. */
+  .select option {
+    background-color: white;
   }
 }
 
