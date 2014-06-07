@@ -241,9 +241,7 @@
       -ms-user-select: none;
           user-select: none;
 }
-.file-custom:after {
-  content: "Choose file...";
-}
+
 .file-custom:before {
   position: absolute;
   top: -.075rem;
