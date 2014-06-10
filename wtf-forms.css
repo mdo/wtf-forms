@@ -103,6 +103,7 @@
 }
 .select select {
   display: inline-block;
+  width: 100%;
   margin: 0;
   padding: .5rem 2.25rem .5rem 1rem;
   line-height: 1.5;
