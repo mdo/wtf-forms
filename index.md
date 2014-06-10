@@ -117,7 +117,17 @@ The `<progress>` element is actually pretty straightforward to style, but it doe
 
 For more information, [read the rather thorough CSS Tricks article](http://css-tricks.com/html5-progress-element/). There you'll find gotchas around generated content, browser quirks, and more. The MDN also has an informative [article on the progress element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress).
 
-#### IE9 support
+#### Custom width
+
+The `width` is autmatically set by the browser, but you can easily change it by adding some CSS to `.progress`.
+
+```css
+.progress {
+  width: 100%;
+}
+```
+
+#### Internet Explorer 9 support
 
 <form class="controls-stacked">
   {% include progress-ie9.html %}
@@ -138,7 +148,7 @@ IE10 natively supports the `<progress>` element, but IE9 doesn't. Instead, they 
 ### FAQs
 
 #### What about every other form control?
-For the time being, **WTF, forms?** is limited to checkboxes, radio buttons, select menus, and file inputs. Additional custom inputs will depend on browser support.
+For the time being, **WTF, forms?** is limited to checkboxes, radio buttons, select menus, file inputs, and progress bars. Additional custom inputs will depend on browser support.
 
 #### Why are there no `for` attributes?
 We nest our `<input>`s and `<select>`s within a `<label>`, so there's no need to specify a `for` attribute as the browser will automatically associate the two.
