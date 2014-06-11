@@ -66,6 +66,12 @@
   background-color: #0074d9;
 }
 
+/* Active */
+.control input:active ~ .control-indicator {
+  color: #fff;
+  background-color: #84c6ff;
+}
+
 /* Checkbox modifiers */
 .checkbox .control-indicator {
   border-radius: .25rem;
