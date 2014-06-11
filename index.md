@@ -73,6 +73,7 @@ The `<select>` has quite a few styles to override and includes a few hacks to ge
 * Clickability is limited in IE9.
 * Firefox's dropdown of `option`s looks rather ugly.
 * The custom caret is unable to receive the selected state's `color`.
+* Styling of `select[multiple]` elements is basically impossible because `<option>`s are presently unstylable in all browsers.
 
 Any ideas on improving these are most welcome.
 
