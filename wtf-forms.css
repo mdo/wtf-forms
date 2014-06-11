@@ -109,6 +109,7 @@
 }
 .select select {
   display: inline-block;
+  width: 100%;
   margin: 0;
   padding: .5rem 2.25rem .5rem 1rem;
   line-height: 1.5;
@@ -275,16 +276,88 @@
 
 
 /*
+ * Progress
+ */
+
+.progress {
+  display: inline-block;
+  height: 1rem;
+}
+.progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Remove Firefox and Opera border */
+  border: 0;
+  /* IE10 uses `color` to set the bar background-color */
+  color: #0074d9;
+}
+.progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: .2rem;
+}
+.progress[value]::-webkit-progress-value {
+  background-color: #0074d9;
+  border-top-left-radius: .2rem;
+  border-bottom-left-radius: .2rem;
+}
+.progress[value="100"]::-webkit-progress-value {
+  border-top-right-radius: .2rem;
+  border-bottom-right-radius: .2rem;
+}
+
+/* Firefox styles must be entirely separate or it busts Webkit styles. */
+@-moz-document url-prefix() {
+  .progress[value] {
+    background-color: #eee;
+    border-radius: .2rem;
+  }
+  .progress[value]::-moz-progress-bar {
+    background-color: #0074d9;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+  }
+  .progress[value="100"]::-moz-progress-bar {
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+  }
+}
+
+/* IE9 hacks to accompany custom markup. We don't need to scope this via media queries, but I feel better doing it anyway. */
+@media screen and (min-width:0\0) {
+  .progress {
+    background-color: #eee;
+    border-radius: .2rem;
+  }
+  .progress-bar {
+    display: inline-block;
+    height: 1rem;
+    text-indent: -999rem; /* Simulate hiding of value as in native `<progress>` */
+    background-color: #0074d9;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+  }
+  .progress[width="100%"] {
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+  }
+}
+
+
+/*
  * Control layouts
  */
 
 .controls-stacked {
   margin: 1rem 0;
 }
-.controls-stacked .control {
+.controls-stacked .control,
+.controls-stacked .progress {
   display: block;
 }
-.controls-stacked .control + .control {
+.controls-stacked .control + .control,
+.controls-stacked .progress + .progress {
   margin-top: .5rem;
 }
 
