@@ -100,10 +100,56 @@ In other words, it's an entirely custom element, all generated via CSS.
 **Heads up!** The custom file input is currently unable to update the *Choose file...* text with the filename. Without JavaScript, this might not be possible to change, but I'm open to ideas.
 
 
+### Progress
+
+<form class="controls-stacked">
+  {% include progress.html %}
+</form>
+```html
+{% include progress.html %}
+```
+
+The `<progress>` element is actually pretty straightforward to style, but it does have some gotchas. Here's the deal:
+
+* Unlike most other custom inputs, we don't wrap it in an extra element. We just add `.progress`.
+* Using pseudo selectors, we target aspects of the `<progress>` element. For example, in WebKit browsers, `::-webkit-progress-bar` is the background bar and `::-webkit-progress-value` is the colored progress bar within.
+* Firefox has it's own pseudo selectors that must be applied with duplicate rulesets. Chaining `::-webkit-` and `::-moz-` pseudo selectors will nullify your styles. (It's worth noting this happens with other pseudo selectors like `placeholder`).
+* IE10 is the only version of IE to support `<progress>`. The only quirk there is that you must set the `color` property on the `<progress>` element to colorize the progress bar within.
+
+For more information, [read the rather thorough CSS Tricks article](http://css-tricks.com/html5-progress-element/). There you'll find gotchas around generated content, browser quirks, and more. The MDN also has an informative [article on the progress element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress).
+
+#### Custom width
+
+The `width` is autmatically set by the browser, but you can easily change it by adding some CSS to `.progress`.
+
+```css
+.progress {
+  width: 100%;
+}
+```
+
+#### Internet Explorer 9 support
+
+<form class="controls-stacked">
+  {% include progress-ie9.html %}
+</form>
+```html
+{% include progress-ie9.html %}
+```
+
+IE10 natively supports the `<progress>` element, but IE9 doesn't. Instead, they simply show as plain text values. However, IE9 support is just a few hacks away:
+
+* We add custom markup *within* the existing `<progress>` element to simulate the background and inner progress bar.
+* We copy-paste the styles from the pseudo selectors to a IE9-specific media query (like I said, a few hacks) to only apply when necessary.
+* Lastly, to simulate the native `<progress>` behavior, we add `text-indent: -999rem;` to the custom `.progress-bar` to hide the text value.
+
+**Once applied, you can use the IE9-compatible snippet in all browsers.** However, I encourage you to only do so should you need IE9 support.
+
+
 ### FAQs
 
 #### What about every other form control?
-For the time being, **WTF, forms?** is limited to checkboxes, radio buttons, select menus, and file inputs. Additional custom inputs will depend on browser support.
+For the time being, **WTF, forms?** is limited to checkboxes, radio buttons, select menus, file inputs, and progress bars. Additional custom inputs will depend on browser support.
 
 #### Why are there no `for` attributes?
 We nest our `<input>`s and `<select>`s within a `<label>`, so there's no need to specify a `for` attribute as the browser will automatically associate the two.
