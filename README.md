@@ -6,10 +6,9 @@
 
 ---
 
-### Contribute
+### Contributing
 
-Open an issue or a pull request to suggest changes or additions.
-
+Open an issue or a pull request to suggest changes or additions. **Please submit pull requests to the `gh-pages` branch.**
 
 ### License
 

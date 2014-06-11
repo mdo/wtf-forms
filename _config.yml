@@ -5,4 +5,4 @@ twitter:       https://twitter.com/mdo/
 
 markdown:      redcarpet
 permalink:     pretty
-pygments:      true
+highlighter:   pygments
