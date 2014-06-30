@@ -189,6 +189,9 @@
     background: #eee;
     border-radius: .22rem;
   }
+  .select select:active {
+    background: #eee;
+  }
 
   /* <option> elements inherit styles from <select>, so reset them. */
   .select option {
