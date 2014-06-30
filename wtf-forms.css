@@ -132,7 +132,7 @@
 .select:after {
   position: absolute;
   top: 50%;
-  right: 1.25rem;
+  right: .85rem;
   display: inline-block;
   content: "";
   width: 0;
