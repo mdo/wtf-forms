@@ -170,11 +170,24 @@
 
 /* Media query to target Firefox only */
 @-moz-document url-prefix() {
-  /* Firefox hack to hide the arrow */
+  /* Firefox < v29 hack to hide the arrow */
   .select select {
     text-indent: 0.01px;
     text-overflow: '';
     padding-right: 1rem;
+  }
+
+  /* Firefox >= v30 hack to hide the arrow */
+  .select:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    pointer-events: none;
+    width: 1em;
+    background: #eee;
+    border-radius: .22rem;
   }
 
   /* <option> elements inherit styles from <select>, so reset them. */
