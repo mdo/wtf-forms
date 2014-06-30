@@ -211,6 +211,28 @@
   }
 }
 
+/* IE10 hack to make the arrow clickable */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .select {
+    background-color: #eee;
+    border-radius: .25rem;
+  }
+  .select select {
+    padding-right: 2.5rem;
+    width: auto;
+    position: relative;
+    background: transparent;
+  }
+  .select:after,
+  .select:before {
+    z-index: 0;
+  }
+  .select select:hover,
+  .select select:focus,
+  .select select:active {
+    background-color: transparent;
+  }
+}
 
 
 /*
