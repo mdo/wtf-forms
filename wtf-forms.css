@@ -181,6 +181,38 @@
   .select option {
     background-color: white;
   }
+
+  /*  workaround for Firefox 30.0 */
+  /* It hides the default dropdown arrow with a ':before' element.
+  If you change the background-color of the <select> , remember to set the
+  same background-color for the :before element.
+  */
+  .select select{
+    -moz-border-radius-bottomright: 0.35rem;
+    -moz-border-radius-topright: 0.35rem;
+    border-bottom-right-radius: 0.35rem;
+    border-top-right-radius: 0.35rem;
+    /*
+    the border right radius of the <select> element has always to be a little
+    bigger than the border right radius of the ':before' element, because it has to completly hide it.
+    On other hand, border left radius of the <select> has to be the same of the border right radius of the ':before' element,
+    beacuse the corner of the dropdown are used to be symmetric.
+    */
+  }
+  .select:before {
+      content: "";
+      background-color: #eeeeee;
+      width: 15px;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      -moz-border-radius-bottomright: 0.25rem;
+      -moz-border-radius-topright: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+      pointer-events: none;
+    }
 }
 
 /* IE9 hack to hide the arrow */
