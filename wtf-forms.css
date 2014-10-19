@@ -179,7 +179,7 @@
 
   /* <option> elements inherit styles from <select>, so reset them. */
   .select option {
-    background-color: white;
+    background-color: #fff;
   }
 }
 
