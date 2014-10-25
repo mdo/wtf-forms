@@ -58,7 +58,9 @@ Want to customize the icons further, or use other ones? [Download Open Iconic](h
 {% include select.html %}
 ```
 
-Similar to the checkboxes and radios, we wrap the `<select>` in a `<label>` as a semantic wrapper that we can generate custom styles on with CSS's generated content.
+We wrap the `<select>` in a `<div>` as a wrapper that we can generate custom styles on with CSS's generated content.
+
+Compared to the previous checkbox and radio button examples, we don't use a `<label>` as a wrapper, as this currently results in unintended behaviour with assistive technologies – for instance, some screen readers will end up reading all `<option>`s contained in the `<select>` as one long label for the form control. To still provide label text for assistive technology, we instead use an appropriate `aria-label` attribute.
 
 The `<select>` has quite a few styles to override and includes a few hacks to get things done. Here's what's happening:
 
@@ -94,6 +96,7 @@ The file input is the most gnarly of the bunch. Here's how it works:
 * We use `:after` to generate a custom background and directive (*Choose file...*).
 * We use `:before` to generate and position the *Browse* button.
 * We declare a `height` on the `<input>` for proper spacing for surrounding content.
+* We add an explicit label text for assistive technologies with an `aria-label` attribute.
 
 In other words, it's an entirely custom element, all generated via CSS.
 
