@@ -167,7 +167,7 @@ Not for the time being, however, the file input might be better off with it.
 Possibly, but not until v4 at the earliest.
 
 #### Is this screen reader friendly?
-Honestly, no idea right now.
+Initial testing with various standard combinations (Internet Explorer/Firefox with JAWS15/NVDA on Windows, Safari with VoiceOver on OS X and iOS, Chrome with TalkBack on Android) does not show any adverse effects – the form controls are announced and function the same way. (hat tip: [@patrick_h_lauke](https://twitter.com/patrick_h_lauke))
 
 
 ### Changelog
