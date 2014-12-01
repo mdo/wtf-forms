@@ -60,7 +60,7 @@ Want to customize the icons further, or use other ones? [Download Open Iconic](h
 
 We wrap the `<select>` in a `<div>` as a wrapper that we can generate custom styles on with CSS's generated content.
 
-Compared to the previous checkbox and radio button examples, we don't use a `<label>` as a wrapper, as this currently results in unintended behaviour with assistive technologies – for instance, some screen readers will end up reading all `<option>`s contained in the `<select>` as one long label for the form control. To still provide label text for assistive technology, we instead use an appropriate `aria-label` attribute.
+Previously, we used a `<label>` as the wrapper, but this can result in unintended behavior with assistive technologies. For instance, some screen readers will end up reading all `<option>`s contained in the `<select>` as one long label for the form control. To still provide label text for assistive technologies, we instead use an appropriate `aria-label` attribute.
 
 The `<select>` has quite a few styles to override and includes a few hacks to get things done. Here's what's happening:
 
@@ -167,8 +167,7 @@ Not for the time being, however, the file input might be better off with it.
 Possibly, but not until v4 at the earliest.
 
 #### Is this screen reader friendly?
-Initial testing with various standard combinations (Internet Explorer/Firefox with JAWS15/NVDA on Windows, Safari with VoiceOver on OS X and iOS, Chrome with TalkBack on Android) does not show any adverse effects – the form controls are announced and function the same way. (hat tip: [@patrick_h_lauke](https://twitter.com/patrick_h_lauke))
-
+Initial testing done by [@patrick_h_lauke](https://twitter.com/patrick_h_lauke) (on [version 2.2.0]({{ site.repo }}releases/tag/v2.2.0)) with various standard combinations (Internet Explorer/Firefox with JAWS15/NVDA on Windows, Safari with VoiceOver on OS X and iOS, Chrome with TalkBack on Android) does not show any adverse effects.
 
 ### Changelog
 
