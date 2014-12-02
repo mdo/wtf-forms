@@ -58,7 +58,9 @@ Want to customize the icons further, or use other ones? [Download Open Iconic](h
 {% include select.html %}
 ```
 
-Similar to the checkboxes and radios, we wrap the `<select>` in a `<label>` as a semantic wrapper that we can generate custom styles on with CSS's generated content.
+We wrap the `<select>` in a `<div>` as a wrapper that we can generate custom styles on with CSS's generated content.
+
+Previously, we used a `<label>` as the wrapper, but this can result in unintended behavior with assistive technologies. For instance, some screen readers will end up reading all `<option>`s contained in the `<select>` as one long label for the form control. To still provide label text for assistive technologies, we instead use an appropriate `aria-label` attribute.
 
 The `<select>` has quite a few styles to override and includes a few hacks to get things done. Here's what's happening:
 
@@ -94,6 +96,7 @@ The file input is the most gnarly of the bunch. Here's how it works:
 * We use `:after` to generate a custom background and directive (*Choose file...*).
 * We use `:before` to generate and position the *Browse* button.
 * We declare a `height` on the `<input>` for proper spacing for surrounding content.
+* We add an explicit label text for assistive technologies with an `aria-label` attribute.
 
 In other words, it's an entirely custom element, all generated via CSS.
 
@@ -164,8 +167,7 @@ Not for the time being, however, the file input might be better off with it.
 Possibly, but not until v4 at the earliest.
 
 #### Is this screen reader friendly?
-Honestly, no idea right now.
-
+Initial testing done by [@patrick_h_lauke](https://twitter.com/patrick_h_lauke) (on [version 2.2.0]({{ site.repo }}releases/tag/v2.2.0)) with various standard combinations (Internet Explorer/Firefox with JAWS15/NVDA on Windows, Safari with VoiceOver on OS X and iOS, Chrome with TalkBack on Android) does not show any adverse effects.
 
 ### Changelog
 
