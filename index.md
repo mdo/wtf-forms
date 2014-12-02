@@ -167,7 +167,7 @@ Not for the time being, however, the file input might be better off with it.
 Possibly, but not until v4 at the earliest.
 
 #### Is this screen reader friendly?
-Initial testing done by [@patrick_h_lauke](https://twitter.com/patrick_h_lauke) (on [version 2.2.0]({{ site.repo }}releases/tag/v2.2.0)) with various standard combinations (Internet Explorer/Firefox with JAWS15/NVDA on Windows, Safari with VoiceOver on OS X and iOS, Chrome with TalkBack on Android) does not show any adverse effects.
+Initial testing done by [@patrick\_h\_lauke](https://twitter.com/patrick_h_lauke) (on [version 2.2.0]({{ site.repo }}releases/tag/v2.2.0)) with various standard combinations (Internet Explorer/Firefox with JAWS15/NVDA on Windows, Safari with VoiceOver on OS X and iOS, Chrome with TalkBack on Android) does not show any adverse effects.
 
 ### Changelog
 
