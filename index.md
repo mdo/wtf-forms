@@ -123,7 +123,7 @@ For more information, [read the rather thorough CSS Tricks article](http://css-t
 
 #### Custom width
 
-The `width` is autmatically set by the browser, but you can easily change it by adding some CSS to `.progress`.
+The `width` is automatically set by the browser, but you can easily change it by adding some CSS to `.progress`.
 
 ```css
 .progress {
