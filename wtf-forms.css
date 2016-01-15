@@ -23,7 +23,9 @@
 }
 .control input {
   position: absolute;
-  opacity: 0;
+  top: .25rem;
+  left: 0;
+  opacity: 0.01;
   z-index: -1; /* Put the input behind the label so it doesn't overlay text */
 }
 .control-indicator {
@@ -226,8 +228,8 @@
 .file input {
   min-width: 14rem;
   margin: 0;
-  filter: alpha(opacity=0);
-  opacity: 0;
+  filter: alpha(opacity=0.01);
+  opacity: 0.01;
 }
 .file-custom {
   position: absolute;
