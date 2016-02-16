@@ -41,6 +41,7 @@
   background-size: 50% 50%;
   background-position: center center;
   background-repeat: no-repeat;
+  pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
