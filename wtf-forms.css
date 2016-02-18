@@ -73,6 +73,11 @@
   background-color: #84c6ff;
 }
 
+/* Disabled */
+.control input:disabled ~ .control-indicator {
+  background-color: #bbb;
+}
+
 /* Checkbox modifiers */
 .checkbox .control-indicator {
   border-radius: .25rem;
