@@ -115,7 +115,7 @@
   padding: .5rem 2.25rem .5rem 1rem;
   line-height: 1.5;
   color: #555;
-  background-color: #eee;
+  background: #eee;
   border: 0;
   border-radius: .25rem;
   cursor: pointer;
@@ -133,7 +133,7 @@
 .select:after {
   position: absolute;
   top: 50%;
-  right: 1.25rem;
+  right: .85rem;
   display: inline-block;
   content: "";
   width: 0;
@@ -171,11 +171,27 @@
 
 /* Media query to target Firefox only */
 @-moz-document url-prefix() {
-  /* Firefox hack to hide the arrow */
+  /* Firefox < v30 hack to hide the arrow */
   .select select {
     text-indent: 0.01px;
     text-overflow: '';
     padding-right: 1rem;
+  }
+
+  /* Firefox >= v30 hack to hide the arrow */
+  .select:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    pointer-events: none;
+    width: 1em;
+    background: #eee;
+    border-radius: .22rem;
+  }
+  .select select:active {
+    background: #eee;
   }
 
   /* <option> elements inherit styles from <select>, so reset them. */
