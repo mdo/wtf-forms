@@ -1,3 +1,7 @@
+**WTF, Forms? is no longer maintained.** See the [Bootstrap v4 custom forms](https://getbootstrap.com/docs/4.5/components/forms/#custom-forms) or upcoming [Bootstrap 5 forms](https://v5.getbootstrap.com/docs/5.0/forms/overview/) for newer, fancier, and more flexible form fields.
+
+---
+
 # WTF, forms?
 
 **WTF, forms?** provides friendlier HTML form controls with a little CSS magic. It's designed for IE9+, as well as the latest Chrome, Safari, and Firefox.
