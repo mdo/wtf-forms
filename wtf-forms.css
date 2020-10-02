@@ -371,3 +371,24 @@
 .controls-inline .control + .control {
   margin-left: 1rem;
 }
+
+
+/*
+ * Print styles 
+ */
+
+@media print {
+
+  .control-indicator {
+    display: none;
+  }
+  .control {
+    padding-left: inherit;
+  }
+  .control input {
+    position: relative;
+    opacity: 1;
+    z-index: 1;
+  }
+
+}
